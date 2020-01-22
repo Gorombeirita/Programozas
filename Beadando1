@@ -1,0 +1,37 @@
+using System;
+
+namespace MyApplication
+{
+   public class Program
+    {
+        public static int[] tömb;
+        public static int thossz;
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Milyen hosszú legyen a tömb?");
+            thossz = Convert.ToInt32(Console.ReadLine());
+            tömb = new int[thossz];
+            for (int i = 0; i < tömb.Length; i++)
+            {
+                _ = new Alpha();
+                tömb[i] = Alpha.randNum;
+            }
+            
+            Console.WriteLine("Rendezettlen tömb:");
+            for (int i = 0; i < thossz; i++)
+            {
+                Console.Write(tömb[i] + " ");               
+            }
+            Console.WriteLine();
+            Beta.Rend();
+            Console.WriteLine("Rendezett tömb:");
+            for (int i = 0; i < thossz; i++)
+            {
+                Console.Write(tömb[i] + " ");
+                
+            }
+            Console.WriteLine();
+            Console.ReadKey();
+        }
+    }
+}
